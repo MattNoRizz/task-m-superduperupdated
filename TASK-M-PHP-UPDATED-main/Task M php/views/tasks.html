@@ -1,0 +1,107 @@
+<link href="./assets/css/tasks.css" rel="stylesheet">
+<link href="./assets/css/style.css" rel="stylesheet">
+<div class="container-fluid">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="logo mb-4">
+                    <h3 class="text-white">Task Manager</h3>
+                </div>
+                <nav class="nav flex-column">
+                    <a class="nav-link" href="maincontent.html">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                    <a class="nav-link" href="tasks.html">
+                        <i class="fas fa-tasks"></i> Tasks
+                    </a>
+                    <a class="nav-link active" href="create-task.html">
+                        <i class="fas fa-plus"></i> New Task
+                    </a>
+                    <a class="nav-link" href="profile.html">
+                        <i class="fas fa-user"></i> Profile
+                    </a>
+                    <a class="nav-link" href="statistics.html">
+                        <i class="fas fa-statistics"></i> Statistics
+                    <a class="nav-link" href="#" id="logoutBtn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </nav>
+            </div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        new Navigation();
+    });
+</script>
+<script src="/js/navigation.js" defer></script>
+
+       <!-- Main content -->
+       <div class="col-md-9 col-lg-10 main-content">
+        <div class="tasks-container">
+            <!-- Task Card -->
+            <div class="task-card">
+                <div class="task-info">
+                    <h3 class="task-title">Example Task</h3>
+                    <p class="task-description">This is a sample task description.</p>
+                    <div class="task-meta">
+                        <span class="task-priority priority-high">High</span>
+                        <span class="task-category">Work</span>
+                        <span class="task-date"><i class="far fa-calendar"></i> 2024-01-20</span>
+                    </div>
+                </div>
+                <div class="task-actions">
+                    <button class="task-action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                    <button class="task-action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+            <!-- Additional task cards will go here -->
+        </div>
+
+        <!-- Form Container -->
+        <div class="form-container">
+            <form class="create-task-form">
+                <h4 class="form-title">Create New Task</h4>
+                <div class="form-group">
+                    <label for="task-title">Task Title</label>
+                    <input type="text" id="task-title" placeholder="Enter task title" />
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" placeholder="Provide a brief description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="due-date">Due Date</label>
+                    <input type="date" id="due-date" />
+                </div>
+                <div class="form-group">
+                    <label for="priority">Priority</label>
+                    <select id="priority">
+                        <option value="">Select Priority</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category">
+                        <option value="">Select Category</option>
+                        <option value="work">Work</option>
+                        <option value="personal">Personal</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="tags">Tags</label>
+                    <input type="text" id="tags" placeholder="Enter tags separated by commas" />
+                </div>
+                <div class="form-actions">
+                    <button class="btn btn-primary" type="submit">Create Task</button>
+                    <button class="btn btn-secondary" type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

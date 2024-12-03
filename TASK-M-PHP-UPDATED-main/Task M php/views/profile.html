@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings</title>
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/profile.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="logo mb-4">
+                    <h3 class="text-white">Task Manager</h3>
+                </div>
+                <nav class="nav flex-column">
+                    <a class="nav-link" href="maincontent.html">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                    <a class="nav-link" href="tasks.html">
+                        <i class="fas fa-tasks"></i> Tasks
+                    </a>
+                    <a class="nav-link active" href="create-task.html">
+                        <i class="fas fa-plus"></i> New Task
+                    </a>
+                    <a class="nav-link" href="profile.html">
+                        <i class="fas fa-user"></i> Profile
+                    </a>
+                    <a class="nav-link" href="statistics.html">
+                        <i class="fas fa-statistics"></i> Statistics
+                    </a>
+                    <a class="nav-link" href="#" id="logoutBtn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <div class="profile-container">
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <h2>Profile Settings</h2>
+                        </div>
+                        
+                        <div class="profile-content">
+                            <div class="profile-image-section">
+                                <div class="profile-image-container">
+                                    <img src="" id="profileImage" alt="Profile Image">
+                                    <button class="upload-image">
+                                        <i class="fas fa-camera"></i>
+                                    </button>
+                                </div>
+                                <h4 id="username">John Doe</h4>
+                                <p id="email">johndoe@example.com</p>
+                            </div>
+
+                            <form id="profileForm" class="profile-settings-form">
+                                <div class="form-group">
+                                    <label for="usernameInput">Username</label>
+                                    <div class="input-group">
+                                        <span class="input-group-icon"><i class="fas fa-user"></i></span>
+                                        <input type="text" id="usernameInput" placeholder="Enter your username">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="emailInput">Email</label>
+                                    <div class="input-group">
+                                        <span class="input-group-icon"><i class="fas fa-envelope"></i></span>
+                                        <input type="email" id="emailInput" placeholder="Enter your email">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="themeSelect">Theme</label>
+                                    <div class="input-group">
+                                        <span class="input-group-icon"><i class="fas fa-palette"></i></span>
+                                        <select id="themeSelect">
+                                            <option value="light">Light</option>
+                                            <option value="dark">Dark</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="timezoneSelect">Timezone</label>
+                                    <div class="input-group">
+                                        <span class="input-group-icon"><i class="fas fa-globe"></i></span>
+                                        <select id="timezoneSelect"></select>
+                                    </div>
+                                </div>
+
+                                <div class="notification-preferences">
+                                    <h6>Notification Preferences</h6>
+                                    <div class="notification-options">
+                                        <div class="form-check">
+                                            <input type="checkbox" id="emailNotifications">
+                                            <label for="emailNotifications">Email Notifications</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" id="webNotifications">
+                                            <label for="webNotifications">Web Notifications</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="profile-save-button">
+                                    <i class="fas fa-save"></i> Save Changes
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/TASK-M-PHP-UPDATED-main/Task M php/js/profile.js"></script>
+</body>
+</html>

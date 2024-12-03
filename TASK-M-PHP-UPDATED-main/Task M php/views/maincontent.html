@@ -1,0 +1,81 @@
+<!-----sidebar----->
+<link href="./assets/css/style.css" rel="stylesheet">
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo mb-4">
+                <h3 class="text-white">Task Manager</h3>
+            </div>
+            <nav class="nav flex-column">
+                <a class="nav-link" href="maincontent.html">
+                    <i class="fas fa-home"></i> Dashboard
+                </a>
+                <a class="nav-link" href="tasks.html">
+                    <i class="fas fa-tasks"></i> Tasks
+                </a>
+                <a class="nav-link active" href="create-task.html">
+                    <i class="fas fa-plus"></i> New Task
+                </a>
+                <a class="nav-link" href="profile.html">
+                    <i class="fas fa-user"></i> Profile
+                </a>
+                <a class="nav-link" href="statistics.html">
+                    <i class="fas fa-statistics"></i> Statistics
+                </a>
+                <a class="nav-link" href="#" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </nav>
+        </div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        new Navigation();
+    });
+</script>
+<script src="/js/navigation.js" defer></script>
+<!-- Main Content -->
+<div class="col-md-9 col-lg-10 main-content">
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Pending Tasks</h5>
+                    <h2 id="pendingCount">0</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">In Progress</h5>
+                    <h2 id="progressCount">0</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Completed</h5>
+                    <h2 id="completedCount">0</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">Recent Tasks</h5>
+            <button class="btn btn-primary" onclick="window.location.href='#/create-task'">
+                <i class="fas fa-plus"></i> New Task
+            </button>
+        </div>
+        <div class="card-body">
+            <div id="tasksList" class="task-list"></div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
